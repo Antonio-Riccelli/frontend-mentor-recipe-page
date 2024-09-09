@@ -1,0 +1,12 @@
+{
+  "name": "recipe-page-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sassify": "sass --watch main.scss style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
