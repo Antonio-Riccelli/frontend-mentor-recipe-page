@@ -42,6 +42,7 @@ $clr-quaternary-50: hsl(330, 100%, 98%);
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: $clr-quaternary-50;
 }
 /*
     5. Improve media defaults
@@ -75,12 +76,83 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+h2,
+h3 {
+  color: $clr-tertiary;
+}
 /*
     8. Create a root stacking context
   */
 #root,
 #__next {
   isolation: isolate;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  padding: 1.5rem;
+}
+
+.prep-wrapper {
+  margin: 1rem 0;
+  padding: 0.8rem 1.2rem;
+  background-color: $clr-secondary-100;
+  border-radius: 0.8rem;
+
+  h3 {
+    color: $clr-quaternary-800;
+  }
+
+  ul {
+    padding: 1rem;
+    li {
+      padding-left: 1rem;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.ingredients-wrapper {
+
+  ul {
+    padding: 1rem;
+  }
+}
+
+.instructions-wrapper {
+
+
+  ol {
+    padding: 1rem;
+  }
+}
+
+
+.nutrition-wrapper {
+
+  ul {
+    list-style: none;
+
+    li {
+      border-bottom: 0.5px solid black;
+      padding: 1rem;
+
+      span {
+        color: $clr-tertiary;
+        font-weight: 700;
+      }
+    }
+  }
 }
 
 .attribution {

@@ -33,6 +33,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: hsl(330, 100%, 98%);
 }
 
 /*
@@ -70,12 +71,67 @@ h6 {
   overflow-wrap: break-word;
 }
 
+h2,
+h3 {
+  color: hsl(14, 45%, 36%);
+}
+
 /*
     8. Create a root stacking context
   */
 #root,
 #__next {
   isolation: isolate;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  padding: 1.5rem;
+}
+
+.prep-wrapper {
+  margin: 1rem 0;
+  padding: 0.8rem 1.2rem;
+  background-color: hsl(30, 54%, 90%);
+  border-radius: 0.8rem;
+}
+.prep-wrapper h3 {
+  color: hsl(332, 51%, 32%);
+}
+.prep-wrapper ul {
+  padding: 1rem;
+}
+.prep-wrapper ul li {
+  padding-left: 1rem;
+}
+.prep-wrapper ul li span {
+  font-weight: bold;
+}
+
+.ingredients-wrapper ul {
+  padding: 1rem;
+}
+
+.instructions-wrapper ol {
+  padding: 1rem;
+}
+
+.nutrition-wrapper ul {
+  list-style: none;
+}
+.nutrition-wrapper ul li {
+  border-bottom: 0.5px solid black;
+  padding: 1rem;
+}
+.nutrition-wrapper ul li span {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
 }
 
 .attribution {
