@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Young Serif";
   font-style: normal;
-  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("ttf");
+  src: local(""), url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
 @font-face {
   font-family: "Outfit";
   font-style: normal;
-  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("ttf");
+  src: local(""), url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -33,7 +33,8 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: hsl(330, 100%, 98%);
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Outfit", sans-serif;
 }
 
 /*
@@ -71,6 +72,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+}
+
 h2,
 h3 {
   color: hsl(14, 45%, 36%);
@@ -94,11 +100,14 @@ main {
 .content-wrapper {
   padding: 1.5rem;
 }
+.content-wrapper p {
+  margin: 1.5rem 0 1.5rem 0;
+}
 
 .prep-wrapper {
   margin: 1rem 0;
   padding: 0.8rem 1.2rem;
-  background-color: hsl(30, 54%, 90%);
+  background-color: hsl(330, 100%, 98%);
   border-radius: 0.8rem;
 }
 .prep-wrapper h3 {
@@ -109,6 +118,7 @@ main {
 }
 .prep-wrapper ul li {
   padding-left: 1rem;
+  margin: 0.5rem 0;
 }
 .prep-wrapper ul li span {
   font-weight: bold;
@@ -117,9 +127,27 @@ main {
 .ingredients-wrapper ul {
   padding: 1rem;
 }
+.ingredients-wrapper ul li {
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
 
 .instructions-wrapper ol {
   padding: 1rem;
+  color: hsl(332, 51%, 32%);
+  font-weight: bold;
+}
+.instructions-wrapper ol li {
+  padding-left: 1rem;
+}
+.instructions-wrapper ol li p {
+  color: black;
+  font-weight: normal;
+  margin: 0.5rem 0;
+}
+.instructions-wrapper ol span {
+  color: black;
+  font-weight: bold;
 }
 
 .nutrition-wrapper ul {
@@ -127,7 +155,10 @@ main {
 }
 .nutrition-wrapper ul li {
   border-bottom: 0.5px solid black;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
 }
 .nutrition-wrapper ul li span {
   color: hsl(14, 45%, 36%);

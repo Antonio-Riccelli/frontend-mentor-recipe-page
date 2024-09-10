@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Young Serif";
   font-style: normal;
-  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("ttf");
+  src: local(""), url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
 }
 
 @font-face {
   font-family: "Outfit";
   font-style: normal;
-  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("ttf");
+  src: local(""), url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
 }
 
 $clr-primary: hsl(0, 0%, 100%);
@@ -18,6 +18,8 @@ $clr-secondary-900: hsl(24, 5%, 18%);
 $clr-tertiary: hsl(14, 45%, 36%);
 $clr-quaternary-800: hsl(332, 51%, 32%);
 $clr-quaternary-50: hsl(330, 100%, 98%);
+
+// CSS RESET
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -42,7 +44,8 @@ $clr-quaternary-50: hsl(330, 100%, 98%);
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: $clr-quaternary-50;
+  background-color: $clr-primary;
+  font-family: "Outfit", sans-serif;
 }
 /*
     5. Improve media defaults
@@ -77,6 +80,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+}
+
 h2,
 h3 {
   color: $clr-tertiary;
@@ -98,12 +106,16 @@ main {
 
 .content-wrapper {
   padding: 1.5rem;
+
+  p {
+    margin: 1.5rem 0 1.5rem 0;
+  }
 }
 
 .prep-wrapper {
   margin: 1rem 0;
   padding: 0.8rem 1.2rem;
-  background-color: $clr-secondary-100;
+  background-color: $clr-quaternary-50;
   border-radius: 0.8rem;
 
   h3 {
@@ -112,8 +124,10 @@ main {
 
   ul {
     padding: 1rem;
+
     li {
       padding-left: 1rem;
+      margin: 0.5rem 0;
 
       span {
         font-weight: bold;
@@ -123,20 +137,38 @@ main {
 }
 
 .ingredients-wrapper {
-
   ul {
     padding: 1rem;
+
+    li {
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
   }
 }
 
 .instructions-wrapper {
-
-
   ol {
     padding: 1rem;
+    color: $clr-quaternary-800;
+    font-weight: bold;
+
+    li {
+      padding-left: 1rem;
+
+      p {
+        color: black;
+        font-weight: normal;
+        margin: 0.5rem 0;
+      }
+    }
+
+    span {
+      color: black;
+      font-weight: bold;
+    }
   }
 }
-
 
 .nutrition-wrapper {
 
@@ -145,7 +177,10 @@ main {
 
     li {
       border-bottom: 0.5px solid black;
-      padding: 1rem;
+      padding: 1rem 2rem;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
 
       span {
         color: $clr-tertiary;
