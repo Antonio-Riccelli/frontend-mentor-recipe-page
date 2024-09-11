@@ -132,8 +132,10 @@ hgroup:first-of-type h1 {
   background-color: hsl(330, 100%, 98%);
   border-radius: 0.8rem;
 }
-.prep-wrapper h3 {
+.prep-wrapper h2 {
   color: hsl(332, 51%, 32%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.3rem;
 }
 .prep-wrapper ul {
   padding: 1.5rem;

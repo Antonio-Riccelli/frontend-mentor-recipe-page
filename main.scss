@@ -148,8 +148,10 @@ hgroup:first-of-type {
   background-color: $clr-quaternary-50;
   border-radius: 0.8rem;
 
-  h3 {
+  h2 {
     color: $clr-quaternary-800;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
   }
 
   ul {
