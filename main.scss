@@ -19,6 +19,9 @@ $clr-tertiary: hsl(14, 45%, 36%);
 $clr-quaternary-800: hsl(332, 51%, 32%);
 $clr-quaternary-50: hsl(330, 100%, 98%);
 
+$layout-mdm-breakpoint: 768px;
+$layout-lrg-breakpoint: 1440px;
+
 // CSS RESET
 
 /*
@@ -44,7 +47,7 @@ $clr-quaternary-50: hsl(330, 100%, 98%);
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: $clr-primary;
+  background-color: $clr-secondary-100;
   font-family: "Outfit", sans-serif;
 }
 /*
@@ -102,10 +105,38 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $clr-primary;
+  width: 100%;
+
+  ol,
+  ul {
+    color: $clr-quaternary-800;
+
+    li {
+      p {
+        color: black;
+      }
+    }
+  }
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+hgroup:first-of-type {
+  h1 {
+    // text-align: center;
+    font-size: 2rem;
+  }
 }
 
 .content-wrapper {
-  padding: 1.5rem;
+  padding: 2rem;
 
   p {
     margin: 1.5rem 0 1.5rem 0;
@@ -114,7 +145,7 @@ main {
 
 .prep-wrapper {
   margin: 1rem 0;
-  padding: 0.8rem 1.2rem;
+  padding: 1.5rem;
   background-color: $clr-quaternary-50;
   border-radius: 0.8rem;
 
@@ -123,7 +154,7 @@ main {
   }
 
   ul {
-    padding: 1rem;
+    padding: 1.5rem;
 
     li {
       padding-left: 1rem;
@@ -137,8 +168,11 @@ main {
 }
 
 .ingredients-wrapper {
+  border-bottom: 0.5px solid grey;
+  padding: 1rem 0;
+
   ul {
-    padding: 1rem;
+    padding: 1.5rem;
 
     li {
       padding-left: 1rem;
@@ -148,8 +182,11 @@ main {
 }
 
 .instructions-wrapper {
+  border-bottom: 0.5px solid grey;
+  padding: 1rem 0;
+
   ol {
-    padding: 1rem;
+    padding: 1.5rem;
     color: $clr-quaternary-800;
     font-weight: bold;
 
@@ -171,6 +208,7 @@ main {
 }
 
 .nutrition-wrapper {
+  padding: 1rem 0;
 
   ul {
     list-style: none;
@@ -178,14 +216,26 @@ main {
     li {
       border-bottom: 0.5px solid black;
       padding: 1rem 2rem;
-      width: 90%;
+      width: 95%;
       display: flex;
       justify-content: space-between;
+      margin: 0 auto;
 
       span {
+        width: 100%;
+        max-width: 50%;
+        color: black;
+      }
+
+      span:nth-child(2) {
+        margin-left: 3.5rem;
         color: $clr-tertiary;
         font-weight: 700;
       }
+    }
+
+    li:last-of-type {
+      border: none;
     }
   }
 }
@@ -195,5 +245,19 @@ main {
   text-align: center;
   a {
     color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (min-width: $layout-mdm-breakpoint) {
+  main {
+    width: 100%;
+    max-width: 700px;
+    margin: 5rem auto;
+    border-radius: 1rem;
+  }
+
+  img {
+    padding: 1rem;
+    border-radius: 1.5rem;
   }
 }

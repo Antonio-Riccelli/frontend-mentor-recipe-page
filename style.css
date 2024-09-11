@@ -33,7 +33,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(30, 54%, 90%);
   font-family: "Outfit", sans-serif;
 }
 
@@ -95,10 +95,32 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+}
+main ol,
+main ul {
+  color: hsl(332, 51%, 32%);
+}
+main ol li p,
+main ul li p {
+  color: black;
+}
+
+img {
+  width: 100%;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+hgroup:first-of-type h1 {
+  font-size: 2rem;
 }
 
 .content-wrapper {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 .content-wrapper p {
   margin: 1.5rem 0 1.5rem 0;
@@ -106,7 +128,7 @@ main {
 
 .prep-wrapper {
   margin: 1rem 0;
-  padding: 0.8rem 1.2rem;
+  padding: 1.5rem;
   background-color: hsl(330, 100%, 98%);
   border-radius: 0.8rem;
 }
@@ -114,7 +136,7 @@ main {
   color: hsl(332, 51%, 32%);
 }
 .prep-wrapper ul {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .prep-wrapper ul li {
   padding-left: 1rem;
@@ -124,16 +146,24 @@ main {
   font-weight: bold;
 }
 
+.ingredients-wrapper {
+  border-bottom: 0.5px solid grey;
+  padding: 1rem 0;
+}
 .ingredients-wrapper ul {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .ingredients-wrapper ul li {
   padding-left: 1rem;
   margin: 1rem 0;
 }
 
+.instructions-wrapper {
+  border-bottom: 0.5px solid grey;
+  padding: 1rem 0;
+}
 .instructions-wrapper ol {
-  padding: 1rem;
+  padding: 1.5rem;
   color: hsl(332, 51%, 32%);
   font-weight: bold;
 }
@@ -150,19 +180,32 @@ main {
   font-weight: bold;
 }
 
+.nutrition-wrapper {
+  padding: 1rem 0;
+}
 .nutrition-wrapper ul {
   list-style: none;
 }
 .nutrition-wrapper ul li {
   border-bottom: 0.5px solid black;
   padding: 1rem 2rem;
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .nutrition-wrapper ul li span {
+  width: 100%;
+  max-width: 50%;
+  color: black;
+}
+.nutrition-wrapper ul li span:nth-child(2) {
+  margin-left: 3.5rem;
   color: hsl(14, 45%, 36%);
   font-weight: 700;
+}
+.nutrition-wrapper ul li:last-of-type {
+  border: none;
 }
 
 .attribution {
@@ -171,6 +214,19 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 100%;
+    max-width: 700px;
+    margin: 5rem auto;
+    border-radius: 1rem;
+  }
+  img {
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
